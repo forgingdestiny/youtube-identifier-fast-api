@@ -33,4 +33,4 @@ async def identify_url(url_input: URLInput):
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to the YouTube URL Identifier! Please use the /identify endpoint to identify a YouTube URL. See the documentation for more details."}
+    return {"message": "Welcome to the YouTube URL Identifier! Please use the /identify endpoint to identify a YouTube URL. See the documentation for more details. https://github.com/forgingdestiny/youtube-identifier-fast-api"}
