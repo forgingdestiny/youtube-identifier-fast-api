@@ -1,0 +1,52 @@
+[
+  {
+    "type": "Standard URL",
+    "description": "The most common format, usually seen when you navigate to a video from within YouTube's website.",
+    "regex": "https?://www.youtube.com/watch?v=(?P<video_id>[^&]+)"
+  },
+  {
+    "type": "Shortened URL",
+    "description": "A shorter version of the standard URL, often used for sharing.",
+    "regex": "https?://youtu.be/(?P<video_id>[^&/]+)"
+  },
+  {
+    "type": "Embedded URL",
+    "description": "Used when the video is embedded in another website.",
+    "regex": "https?://www.youtube.com/embed/(?P<video_id>[^&/]+)"
+  },
+  {
+    "type": "Mobile URL",
+    "description": "Sometimes seen when browsing YouTube on a mobile device.",
+    "regex": "https?://m.youtube.com/watch?v=(?P<video_id>[^&]+)"
+  },
+  {
+    "type": "Standard URL (no www Prefix)",
+    "description": "Some browsers automatically add the www, but it's not strictly necessary.",
+    "regex": "https?://youtube.com/watch?v=(?P<video_id>[^&]+)"
+  },
+  {
+    "type": "Insecure HTTP",
+    "description": "Although YouTube will redirect to HTTPS, HTTP URLs are technically valid.",
+    "regex": "http://www.youtube.com/watch?v=(?P<video_id>[^&]+)"
+  },
+  {
+    "type": "Studio URL",
+    "description": "Sometimes seen when you're managing videos in YouTube Studio.",
+    "regex": "https?://studio.youtube.com/video/(?P<video_id>[^&/]+)"
+  },
+  {
+    "type": "Music URL",
+    "description": "For YouTube Music videos.",
+    "regex": "https?://music.youtube.com/watch?v=(?P<video_id>[^&]+)"
+  },
+  {
+    "type": "Country-Specific",
+    "description": "Sometimes YouTube URLs can be country-specific.",
+    "regex": "https?://www.youtube.co.uk/watch?v=(?P<video_id>[^&]+)"
+  },
+  {
+    "type": "Attribution Link",
+    "description": "Used for sharing and includes the user who shared it.",
+    "regex": "https?://www.youtube.com/attribution_link?a=(?P<video_id>[^&]+)"
+  }
+]
