@@ -21,10 +21,11 @@ def identify_youtube_url(url: str):
                 "type": pattern["type"],
                 "description": pattern["description"],
                 "url": url,
-                "meta": {"video_id": video_id}
+                "meta": {"video_id": video_id},
+                "is_youtube": True
             }
     
-    return {"error": "Not a YouTube URL"}
+    return {"type": "Not YouTube" ,"is_youtube": False, "url": url, "description": "Not a YouTube URL", "meta": {}}
 
 @app.post("/identify/")
 async def identify_url(url_input: URLInput):
